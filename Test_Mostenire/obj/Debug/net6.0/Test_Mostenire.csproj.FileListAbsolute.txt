@@ -1,0 +1,14 @@
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\bin\Debug\net6.0\Test_Mostenire.exe
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\bin\Debug\net6.0\Test_Mostenire.deps.json
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\bin\Debug\net6.0\Test_Mostenire.runtimeconfig.json
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\bin\Debug\net6.0\Test_Mostenire.dll
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\bin\Debug\net6.0\Test_Mostenire.pdb
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.GeneratedMSBuildEditorConfig.editorconfig
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.AssemblyInfoInputs.cache
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.AssemblyInfo.cs
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.csproj.CoreCompileInputs.cache
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.dll
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\refint\Test_Mostenire.dll
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.pdb
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\Test_Mostenire.genruntimeconfig.cache
+C:\mycode\mostenire\Test_Mostenire\Test_Mostenire\obj\Debug\net6.0\ref\Test_Mostenire.dll

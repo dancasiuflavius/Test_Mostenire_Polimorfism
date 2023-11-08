@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Eticheta
+    public class Eticheta : ElementeGeometrice
     {
         Dreptunghi _dreptunghi = new Dreptunghi();
         String _text;
@@ -15,6 +15,20 @@ namespace Test_Mostenire
         {
             _dreptunghi = dreptunghi;
             _text = text;
+        }
+        public Dreptunghi GetDreptunghi()
+        {
+            return _dreptunghi;
+        }
+        public String GetEticheta()
+        {
+            return _text;
+        }
+        public override void Afisare()
+        {
+            _dreptunghi.Afisare();
+            Console.WriteLine(_text);
+
         }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    internal class ElementeGeometrice
+    public class ElementeGeometrice
     {
+        public virtual void Afisare()
+        {
+            Console.WriteLine("Eu sunt o figura geometrica.");
+        }
     }
 }
