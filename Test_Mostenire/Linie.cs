@@ -6,34 +6,44 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Linie : ElementeGeometrice
+    public class Linie : Figura
     {
-        private Punct _punct1 = new Punct();
-        private Punct _punct2 = new Punct();
-        public Linie()
-        {
-
-        }
+        private Punct _punct1;
+        private Punct _punct2;
+      
         public Linie(Punct punct1, Punct punct2)
         {
-            this._punct1 = punct1;
-            this._punct2 = punct2;
+            _punct1 = punct1;
+            _punct2 = punct2;
         }
-        public Punct GetPunct1() 
+        public Punct GetPunct1()
         {
-            return _punct1;          
+            return _punct1;
         }
         public Punct GetPunct2()
         {
             return _punct2;
 
         }
-      
-        public override void Afisare() 
+
+        public override void Afisare()
+        {         
+            Console.WriteLine(this);
+        }
+        public override void Translatare(int x, int y)
         {
-            Console.WriteLine("Linia cu coordonatele: " );
-            _punct1.Afisare();
-            _punct2.Afisare();
+            this._punct1.Translatare(x, y);
+            this._punct2.Translatare(x, y);
+
+        }
+        public override Figura Duplicare()
+        {
+            return new Linie(this._punct1, this._punct2);
+        }
+
+        public override String ToString()
+        {
+            return "\nLinie :" + _punct1 + " " + _punct2 + "\n";
         }
     }
 }

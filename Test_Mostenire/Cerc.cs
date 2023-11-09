@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Test_Mostenire
-{
-    public class Cerc : ElementeGeometrice
+{ 
+    public class Cerc : Figura
     {
-        private Punct _punct = new Punct();
-        private Linie _linie = new Linie();
+        private Punct _punct;
+        private Linie _linie;
 
         public Cerc(Punct punct, Linie linie)
         {
@@ -17,22 +17,24 @@ namespace Test_Mostenire
             this._linie = linie;
         }
 
-        public Punct GetPunct()
-        {
-            return _punct;
-        }
-        public Linie GetLinie()
-        {
-            return _linie;
-        }
+
         public override void Afisare()
         {
-            Console.WriteLine("Cercul cu: ");
-            Console.Write("Centrul de ");
-            _punct.Afisare();
-            Console.WriteLine("Raza:");
-            _linie.Afisare();
-            
+            Console.WriteLine(this);
+        }
+        public override void Translatare(int x, int y)
+        {
+            this._punct.Translatare(x, y);
+            this._linie.Translatare(x, y);
+
+        }
+        public override Figura Duplicare()
+        {
+            return new Cerc(this._punct, this._linie);
+        }
+        public override String ToString()
+        {
+            return "Cercul de Raza: " + _linie + " " + "si centrul: " + _punct ;
         }
     }
 }

@@ -3,38 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Test_Mostenire
 {
-    public class Punct : ElementeGeometrice
+    public class Punct :Figura
     {
-        private int _coordonataX;
-        private int _coordonataY;
+        private int _x;
+        private int _y;
 
 
         public Punct()
         {
 
         }
-        public Punct(int coordonataX, int coordonataY)
+        public Punct(int x, int y)
         {
-            _coordonataX = coordonataX;
-            _coordonataY = coordonataY;
-        }
+            _x = x;
+            _y= y;
+        }       
 
-        public int GetX()
-        {
-            return _coordonataX;
-        }
-        
-        public int GetY()
-        {
-            return _coordonataY;
-        }
-        
         public override void Afisare()
         {
-            Console.WriteLine("Coordonate: " + GetX() + ' ' + GetY());
+            Console.WriteLine(this);          
+        }
+        public override void Translatare(int x, int y)
+        {
+            this._x += x;
+            this._y += y;  
+        }
+
+        public override Figura Duplicare()
+        {
+            return  new Punct(this._x, this._y);
+        }
+        public override String ToString()
+        {
+           
+           return "(" + _x + "," + _y + ")";
         }
 
     }

@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Dreptunghi : ElementeGeometrice
+    public class Dreptunghi : Figura
     {
-        Linie _linie1 = new Linie();
-        Linie _linie2 = new Linie();
-        Linie _linie3 = new Linie();
-        Linie _linie4 = new Linie();
+        Linie _linie1 ;
+        Linie _linie2 ;
+        Linie _linie3 ;
+        Linie _linie4 ;
 
-        public Dreptunghi()
-        {
-
-        }
         public Dreptunghi(Linie linie1, Linie linie2, Linie linie3, Linie linie4)
         {
             this._linie1 = linie1;
@@ -25,35 +21,26 @@ namespace Test_Mostenire
             this._linie4 = linie4;
 
         }
-        public Linie GetLinie1()
-        {
-            return _linie1;
-        }
-        public Linie GetLinie2()
-        {
-            return _linie2;
-        }
-        public Linie GetLinie3()
-        {
-            return _linie3;
-        }
-        public Linie GetLinie4()
-        {
-            return _linie4;
-        }
 
         public override void Afisare()
         {
-            Console.WriteLine("Latura1:  ");
-            _linie1.Afisare();
-            Console.WriteLine("Latura2:  ");
-            _linie2.Afisare();
-            Console.WriteLine("Latura3:  ");
-            _linie3.Afisare();
-            Console.WriteLine("Latura4:  ");
-            _linie4.Afisare();
+            Console.WriteLine(this);
+        }
+        public override void Translatare(int x, int y)
+        {
+            this._linie1.Translatare(x, y);
+            this._linie2.Translatare(x, y);
+            this._linie3.Translatare(x, y);
+            this._linie4.Translatare(x, y);
 
-
+        }
+        public override Figura Duplicare()
+        {
+            return new Dreptunghi(this._linie1, this._linie2, this._linie3, this._linie4);
+        }
+        public override String ToString()
+        {
+            return "Dreptunghiul : " + _linie1 + " " + _linie2 + " " + _linie3 + " " + _linie4;
         }
     }
 }
