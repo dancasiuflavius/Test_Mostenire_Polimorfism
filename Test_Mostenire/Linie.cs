@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Linie : Figura
+    public class Linie : IFigura
     {
         private Punct _punct1;
         private Punct _punct2;
@@ -26,17 +26,17 @@ namespace Test_Mostenire
 
         }
 
-        public override void Afisare()
+        public  void Afisare()
         {         
             Console.WriteLine(this);
         }
-        public override void Translatare(int x, int y)
+        public  void Translatare(int x, int y)
         {
             this._punct1.Translatare(x, y);
             this._punct2.Translatare(x, y);
 
         }
-        public override Figura Duplicare()
+        public  IFigura Duplicare()
         {
             return new Linie(this._punct1, this._punct2);
         }

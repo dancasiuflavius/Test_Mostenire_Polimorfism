@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 { 
-    public class Cerc : Figura
+    public class Cerc : IFigura
     {
         private Punct _punct;
         private Linie _linie;
@@ -18,17 +18,17 @@ namespace Test_Mostenire
         }
 
 
-        public override void Afisare()
+        public  void Afisare()
         {
             Console.WriteLine(this);
         }
-        public override void Translatare(int x, int y)
+        public  void Translatare(int x, int y)
         {
             this._punct.Translatare(x, y);
             this._linie.Translatare(x, y);
 
         }
-        public override Figura Duplicare()
+        public  IFigura Duplicare()
         {
             return new Cerc(this._punct, this._linie);
         }

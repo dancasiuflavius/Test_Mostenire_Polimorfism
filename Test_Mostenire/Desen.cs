@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Desen:Figura
+    public class Desen:IFigura
     {
 
-        private List<Figura> figuri;
-        public Desen(List<Figura> figures)
+        private List<IFigura> figuri;
+        public Desen(List<IFigura> figures)
         {
 
             this.figuri = figures;
         }
 
-        public override void Afisare()
+        public void Afisare()
         {
-            
-             foreach(Figura fig in figuri)
+
+            foreach (IFigura fig in figuri)
             {
 
 
                 fig.Afisare();
             }
         }
-        public override void Translatare(int x,int y)
+        public  void Translatare(int x,int y)
         {
 
-            foreach (Figura fig in figuri)
+            foreach (IFigura fig in figuri)
             {
 
 
@@ -37,10 +37,10 @@ namespace Test_Mostenire
             }
         }
 
-        public override Figura Duplicare()
+        public  IFigura Duplicare()
         {
-            List<Figura> figuriDup = new List<Figura>();
-            foreach (Figura fig in figuri)
+            List<IFigura> figuriDup = new List<IFigura>();
+            foreach (IFigura fig in figuri)
             {
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Mostenire
 {
-    public class Dreptunghi : Figura
+    public class Dreptunghi : IFigura
     {
         Linie _linie1 ;
         Linie _linie2 ;
@@ -22,11 +22,11 @@ namespace Test_Mostenire
 
         }
 
-        public override void Afisare()
+        public  void Afisare()
         {
             Console.WriteLine(this);
         }
-        public override void Translatare(int x, int y)
+        public  void Translatare(int x, int y)
         {
             this._linie1.Translatare(x, y);
             this._linie2.Translatare(x, y);
@@ -34,11 +34,11 @@ namespace Test_Mostenire
             this._linie4.Translatare(x, y);
 
         }
-        public override Figura Duplicare()
+        public  IFigura Duplicare()
         {
             return new Dreptunghi(this._linie1, this._linie2, this._linie3, this._linie4);
         }
-        public override String ToString()
+        public  String ToString()
         {
             return "Dreptunghiul : " + _linie1 + " " + _linie2 + " " + _linie3 + " " + _linie4;
         }

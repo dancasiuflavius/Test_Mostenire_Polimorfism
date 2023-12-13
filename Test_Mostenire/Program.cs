@@ -7,14 +7,14 @@ public class Program
     {
 
 
-        Figura figura = new Punct(1, 2);
+        IFigura figura = new Punct(1, 2);
        
 
 
         figura.Translatare(2, 4);
 
 
-        Figura f2=figura.Duplicare();
+        IFigura f2=figura.Duplicare();
 
 
         f2.Afisare();
@@ -35,7 +35,7 @@ public class Program
 
       
 
-        Figura figura4 = new Cerc(punct1, figura3);
+        IFigura figura4 = new Cerc(punct1, figura3);
        
 
         Punct A = new Punct(1, 1);
@@ -49,13 +49,13 @@ public class Program
         Linie linie4 = new Linie(D.Duplicare() as Punct, A);
 
 
-        Figura Figura5 = new Dreptunghi(linie1, linie2, linie3, linie4);
+        IFigura Figura5 = new Dreptunghi(linie1, linie2, linie3, linie4);
       
 
 
 
 
-        List<Figura> list = new List<Figura>();
+        List<IFigura> list = new List<IFigura>();
 
         list.Add(Figura5);
         list.Add(figura4);

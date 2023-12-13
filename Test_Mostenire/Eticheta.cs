@@ -15,12 +15,12 @@ namespace Test_Mostenire
             
             _text = text;
         }
-        public override void Afisare()
+        public  void Afisare()
         {
             Console.WriteLine(this);
         }
 
-        public override String ToString()
+        public  String ToString()
         {
             return "Eticheta : " + base.ToString() + "\n" + _text;
         }

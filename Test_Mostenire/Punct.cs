@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Test_Mostenire
 {
-    public class Punct :Figura
+    public class Punct :IFigura
     {
         private int _x;
         private int _y;
@@ -23,17 +23,17 @@ namespace Test_Mostenire
             _y= y;
         }       
 
-        public override void Afisare()
+        public  void Afisare()
         {
             Console.WriteLine(this);          
         }
-        public override void Translatare(int x, int y)
+        public  void Translatare(int x, int y)
         {
             this._x += x;
             this._y += y;  
         }
 
-        public override Figura Duplicare()
+        public  IFigura Duplicare()
         {
             return  new Punct(this._x, this._y);
         }
