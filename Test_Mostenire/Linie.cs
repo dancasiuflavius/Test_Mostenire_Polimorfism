@@ -40,7 +40,6 @@ namespace Test_Mostenire
         {
             return new Linie(this._punct1, this._punct2);
         }
-
         public override String ToString()
         {
             return "\nLinie :" + _punct1 + " " + _punct2 + "\n";
